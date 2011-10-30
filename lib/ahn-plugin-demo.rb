@@ -6,28 +6,19 @@ class AhnPluginDemo < Adhearsion::Plugin
 #    SayText.start(call)
 #  end
 
+  dialplan :adh_plugin_demo, load: false
+
   class << self
     
-    def dialplan_methods
-      [:adh_plugin_demo]
-    end
-
     def init
-      Proc.new {
-        methods_for :dialplan do
-          def adh_plugin_demo_2
-            SayText.new(self).start
-          end
-        end
-      }
     end
     
-    def adh_plugin_demo
-      SayText.new(self).start
+    def adh_plugin_demo(call)
+      SayText.start(call)
     end
     
     def adh_plugin_demo_2
-      SayText.new(self).start
+      SayText.start(call)
     end
   end
   
