@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.2.0"
   s.summary = "Demo plugin for the new Adhearsion plugin system"
 
-  s.add_runtime_dependency 'adhearsion', ['~> 1.2.0']
+  s.add_runtime_dependency 'adhearsion'
   s.add_runtime_dependency 'activesupport'
 
   s.specification_version = 2
