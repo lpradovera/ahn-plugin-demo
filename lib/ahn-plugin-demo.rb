@@ -6,7 +6,7 @@ class AhnPluginDemo < Adhearsion::Plugin
 #    SayText.start(call)
 #  end
 
-  dialplan :adh_plugin_demo, load: false
+  dialplan ({:name => :adh_plugin_demo, :load => false})
 
   class << self
     
